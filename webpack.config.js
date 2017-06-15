@@ -1,45 +1,41 @@
-const path = require('path');
+const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const BabiliPlugin = require('babili-webpack-plugin');
 const precss = require('precss');
 const autoprefixer = require('autoprefixer');
 const webpack = require('webpack');
 
 module.exports = {
-  context: __dirname,
-  entry: [
-    'react-hot-loader/patch',
-    'webpack-dev-server/client?http://localhost:8080',
-    'webpack/hot/only-dev-server',
-    './client/index.jsx',
-  ],
-  devtool: 'source-map',
+  context: path.join(__dirname, '/src'),
+  entry: {
+    javascript: './components/app/app.jsx',
+  },
+  devtool: 'eval',
+  devServer: {
+    historyApiFallback: true,
+  },
   output: {
-    path: path.join(__dirname, 'dist/'),
-    filename: '[hash].bundle.js',
-    sourceMapFilename: '[hash].map'
+    path: path.join(__dirname, '/dist'),
+    filename: 'bundle.js'
   },
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
   },
-  devServer: {
-    historyApiFallback: true
-  },
   stats: {
     colors: true,
     reasons: true,
-    chunks: true,
+    chunks: true
   },
   module: {
     rules: [
       {
         enforce: 'pre',
-        test: /\.jsx?$/,
-        loader: 'eslint',
-        exclude: /node_modules/,
-        options: {
-          failOnError: false
-        }
+        test: [/\.js$/, /\.jsx$/],
+        loader: 'eslint-loader',
+        exclude: /node_modules/
+      },
+      {
+        test: /\.json$/,
+        loader: 'json-loader'
       },
       {
         test: /\.jsx?$/,
@@ -47,31 +43,18 @@ module.exports = {
         loaders: ['babel-loader'],
       },
       {
-        test: /\.scss$/,
-        use: [{
-          loader: 'style-loader' // creates style nodes from JS strings
-        }, {
-          loader: 'css-loader' // translates CSS into CommonJS
-        }, {
-          loader: 'sass-loader', // compiles Sass to CSS
-          options: {
-            includePaths: [path.join(__dirname, '/node_modules/bootstrap-sass/assets/stylesheets/bootstrap/')]
-          }
-        }]
-      },      
-      {
-        test: /\.(jpg|png|svg)$/,
-        loader: 'url-loader',
-        options: {
-          limit: 25000,
-        },
+        test: [/\.scss$/],
+        use: [
+          'style-loader',// pega los archivos en el CSS
+          'css-loader',// reconoce los imports
+          'sass-loader',
+        ],
       },
     ],
   },
   plugins: [
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: './client/index.tpl.ejs',
+      template: 'index.tpl.ejs',
     }),
     new webpack.LoaderOptionsPlugin({
       options: {
@@ -83,19 +66,5 @@ module.exports = {
         ],
       },
     }),
-    new BabiliPlugin()
   ],
 };
-
-
-/* 
-devServer: {
-    contentBase: 'app/ui/www',
-    devtool: 'eval',
-    hot: true,
-    inline: true,
-    port: 3000,
-    outputPath: buildPath,
-    historyApiFallback: true,
-}
-*/

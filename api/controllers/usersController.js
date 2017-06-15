@@ -12,9 +12,9 @@ exports.getUsers = (req, res) => {
 
 exports.createUsers = (req, res) => {
   console.log('Create user');
-  const user = new Notebook(req.body);
-  //notebook.name=body.name;
-  // console.log(notebook);
+  const user = new User(req.body);
+  //user.name=body.name;
+  // console.log(user);
   //console.log(req.body);
   user.save(err => {
     if (err) {
@@ -22,13 +22,13 @@ exports.createUsers = (req, res) => {
       res.json(err);
     } else {
       res.status(201);
-      res.json(notebook);
+      res.json(user);
     }
   });
 };
 
 exports.deleteUser = (req, res) => {
-  console.log('Delete user')
+  console.log('Delete user');
   //console.log(req);
   User.findByIdAndRemove(req.params.id, (err, data) => {
     if (!err) {
@@ -40,7 +40,7 @@ exports.deleteUser = (req, res) => {
 };
 
 exports.updateUser = (req, res) => {
-  console.log('Update user')
+  console.log('Update user');
   User.findByIdAndUpdate(req.params.id, req.body, (err, data) => {
     if (!err) {
       res.status(201).json({});
