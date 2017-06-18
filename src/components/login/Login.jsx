@@ -1,0 +1,103 @@
+import React from 'react';
+import './_login.scss';
+// import { render } from 'react-dom';
+// const preload = '../../images/';
+import logo from '../../images/slacklogo.svg';
+import arrow from '../../images/loginarrow.svg';
+import menuLogo from '../../images/miniLogo.png';
+
+class Login extends React.Component {
+  render() {
+    return (
+      <div className='container-fluid'>
+        <div className='row'>
+          <div className='navBar row'>
+            <div className='col-md-12'>
+              <div className='logo'>
+                <img src={ menuLogo } alt='Slack' />
+              </div>
+              <div className='navBarLinks'>
+                <ul className='none'>
+                  <li>
+                    <li className='navBar--list'>
+                      <a className='links' href=''>Product</a>
+                    </li>
+                    <li className='navBar--list'>
+                      <a className='links' href=''>Pricing</a>
+                    </li>
+                    <li className='navBar--list'>
+                      <a className='links' href=''>Support</a>
+                    </li>
+                    <li className='navBar--list'>
+                      <a className='links rectangle' href=''>Your Team</a>
+                    </li>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div className='image-background row'>
+            <div className='col-md-12' />
+          </div>
+          <div className=''>
+            <div className='col-md-12' />
+          </div>
+        </div>
+        {/*<div className='modalLogin'>*/}
+        {/*<div className='container'>*/}
+        {/*<div className='loginLogo'>*/}
+        {/*<img src={ logo } alt='Slack' />*/}
+        {/*</div>*/}
+        {/*<h1>Sing In</h1>*/}
+        {/*<section className='' >*/}
+        {/*<form action='' className='' >*/}
+        {/*<div className='col-lg-12' >*/}
+        {/*<div className='form-group'>*/}
+        {/*<input type='text' className='form-control input-lg' placeholder='User name' />*/}
+        {/*</div>*/}
+        {/*</div>*/}
+        {/*<div className='col-lg-6' >*/}
+        {/*<div className='form-group'>*/}
+        {/*<input type='text' className='form-control input-lg' placeholder='Password' />*/}
+        {/*<span class='form-group-btn'>*/}
+        {/*<button class='btn btn-default' type='button'>Go!</button>*/}
+        {/*</span>*/}
+        {/*</div>*/}
+        {/*</div>*/}
+        {/*</form>*/}
+        {/*</section>*/}
+        {/*<p>Need your group started on Slack?</p>*/}
+        {/*</div>*/}
+        {/*</div>*/}
+        <div>
+          <div className='modalLogin' >
+            <div className='row' >
+              <div className='col-md-4 col-md-offset-4' >
+                <img className='imageLogo' src={ logo } alt='Slack' />
+              </div>
+              <div className='col-md-8 col-md-offset-2 center' >
+                <h3 className='title'>Sign in</h3>
+              </div>
+              <div className='col-md-8 col-md-offset-2 center'>
+                <input className='inputEmail' type='text' placeholder='User name' />
+              </div>
+              <div className='col-md-8 col-md-offset-2 center'>
+                <input className='inputText' type='text' placeholder='Password' />
+                <button className='buttonArrow' href='#' id='' >
+                  <img className='imgArrow' src={ arrow } alt='Login' />
+                </button>
+              </div>
+              <div className='col-md-8 col-md-offset-2 center'>
+                {/*<p className='p__login--center'>You do not have an account?</p>
+                <p className='p__login--left'>Sign up </p>*/}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
+export default Login;
+// module.exports = Login;

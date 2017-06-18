@@ -1,0 +1,309 @@
+// * {
+//   font-family: "Helvetica Neue";
+// }
+.wrapper {
+  height: 100vh;
+}
+.navBar {
+  background-color: #3e3044;
+  // opacity: 0.8;
+  height: 8.6767vh;
+}
+.logo {
+  color: #fff;
+  padding-left:40,62992126;
+  padding-top: 2rem;
+  // padding-top: 20.031496063px;
+  // border: 1px solid white;
+  // display: inline-block;
+  float: left;
+}
+.navBarLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  height: 8.6767vh;
+}
+.none {
+  list-style: none;
+  display: inline-block;
+  float: left;
+}
+.navBar--list {
+  float: left;
+}
+.links {
+  line-height: 80px;
+  padding-left: 40.62992126px;
+  padding-right: 40.62992126px;
+  padding-top: 20.031496063px;
+  padding-bottom: 20.031496063px;
+  align-content: center;
+  font-size: 15.251px;
+  font-family: "Helvetica Neue";
+  color: rgb(128, 115, 133);
+  -moz-transform: matrix( 1,0,0,1.04914527476121,0,0);
+  -webkit-transform: matrix( 1,0,0,1.04914527476121,0,0);
+  -ms-transform: matrix( 1,0,0,1.04914527476121,0,0);
+}
+.links:hover {
+  opacity: 0.7;
+  text-decoration: none;
+  color: rgb(128, 115, 133);
+}
+.rectangle {
+  border-width: 1px;
+  border-color: rgb(128, 115, 133);
+  border-style: solid;
+  border-radius: 4px;
+  width: 116px;
+  height: 41px;
+  z-index: 38;
+}
+.modalLogin {
+  font-family: "Helvetica Neue";
+  border-radius:8px;  
+  background-color:#f1f1f1;
+  height: 60vh;
+  width: 45%;//45%;//44.53125%;
+  top: 24.6987vh;
+  //left: 27.734%;
+  margin: 0px 27.5% 0px 27.5%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  -webkit-align-content: center;
+  align-content: center;
+  text-align: center;
+}
+.loginLogo {
+  margin-top: 121.322834646px;
+  margin-left: 232.062992126px;
+  margin-right: 227.905511811px;
+}
+
+.imageLogo{
+  margin: 5rem 0rem 0rem 0rem;
+  width: 100%;
+}
+title{
+  margin: 0rem 1rem 5rem 1rem;
+  font-size: 25.351px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+.inputEmail{
+  border-radius: 8px;
+  background-color: white;
+  font-size: 18px;
+  outline: none;
+  margin: 0.5rem;
+  border: none;
+  height: 7vh;
+  width: 47.8rem;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding-left:10px;
+  color: rgb(159, 163, 167);
+  font-size: 15.251px;
+}
+.inputText{
+  border-top-left-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px; 
+  background-color: white;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  margin: 1rem 0rem 4rem 0.5rem;
+  height: 7vh;
+  width: 37rem;
+  font-size: 15.251px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  padding-left:10px;
+  color: rgb(159, 163, 167);
+  font-size: 15.251px;
+}
+.buttonArrow{
+  background-color: #20a766;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px; 
+  width: 10.8rem;
+  box-shadow: none;
+  border: none;
+  margin: 1rem 0.5rem 4rem 0rem;
+  height: 7vh;
+}
+.imgArrow{
+  width: 3rem;
+  height: 3rem
+}
+
+.p__login--left{
+  font-size: 16px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: rgb(121, 58, 152);
+  font-weight: bold;
+  line-height: 1.625;
+  text-align: left;
+}
+.p__login--center{
+  font-size: 15.251px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: rgb(130, 134, 139);
+  line-height: 1.705;
+  text-align: center;
+  margin-left: 0.5rem;
+}
+// .input {
+//   border-radius: 8px;
+//   background-color: rgb(255, 255, 255);
+//   line-height: 8px;
+//   // position: absolute;
+//   // left: 453px;
+//   // top: 1310px;
+//   // width: 373px;
+//   // height: 60px;
+//   // z-index: 17;
+// }
+
+// .loginButton {
+//   background-color: rgb(32, 167, 102);
+//   // position: absolute;
+//   // left: 743px;
+//   // top: 1310px;
+//   // width: 108px;
+//   // height: 73px;
+//   // z-index: 18;
+// }
+
+
+
+.image-background {
+    background-image: url('../../images/background-80.jpg');
+    height: 37.1084vh;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+    // width: 100vw;
+}
+
+// .Rectangle_3 {
+//   background-color: rgb(49, 39, 54);
+//   position: absolute;
+//   left: 0px;
+//   top: 799px;
+//   width: 1280px;
+//   height: 381px;
+//   z-index: 4;
+// }
+// .BG {
+//   border-radius: 8px;
+//   background-color: rgb(241, 241, 241);
+//   box-shadow: 0px 11px 122px 0px rgba(21, 15, 24, 0.25);
+//   position: absolute;
+//   left: 354px;
+//   top: 1004px;
+//   width: 570px;
+//   height: 491px;
+//   z-index: 15;
+// }
+
+// .Rectangle {
+//   background-color: rgb(32, 167, 102);
+//   position: absolute;
+//   left: 743px;
+//   top: 1310px;
+//   width: 108px;
+//   height: 73px;
+//   z-index: 18;
+// }
+
+
+
+// .Links {
+//   position: absolute;
+//   left: 0px;
+//   top: 0px;
+//   width: 3328px;
+//   height: 2400px;
+//   z-index: 41;
+// }
+// .cta {
+//   position: absolute;
+//   left: 0px;
+//   top: 0px;
+//   width: 3328px;
+//   height: 2400px;
+//   z-index: 40;
+// }
+// .Your_teams {
+//   font-size: 15.251px;
+//   font-family: "Helvetica Neue";
+//   color: rgb(128, 115, 133);
+//   line-height: 1.705;
+//   text-align: left;
+//   -moz-transform: matrix( 1,0,0,1.04914527476121,0,0);
+//   -webkit-transform: matrix( 1,0,0,1.04914527476121,0,0);
+//   -ms-transform: matrix( 1,0,0,1.04914527476121,0,0);
+//   position: absolute;
+//   left: 1122.477px;
+//   // top: 822.499px;
+//   z-index: 39;
+// }
+// .Rectangle_5 {
+//   border-width: 1px;
+//   border-color: rgb(255, 255, 255);
+//   border-style: solid;
+//   border-radius: 4px;
+//   opacity: 0.302;
+//   position: absolute;
+//   left: 1101px;
+//   // top: 814px;
+//   width: 116px;
+//   height: 41px;
+//   z-index: 38;
+// }
+// .Support {
+//   font-size: 15.251px;
+//   font-family: "Helvetica Neue";
+//   color: rgb(129, 116, 134);
+//   line-height: 1.705;
+//   text-align: left;
+//   -moz-transform: matrix( 1,0,0,1.04914527476121,0,0);
+//   -webkit-transform: matrix( 1,0,0,1.04914527476121,0,0);
+//   -ms-transform: matrix( 1,0,0,1.04914527476121,0,0);
+//   position: absolute;
+//   left: 984.5px;
+//   // top: 849.054px;
+//   z-index: 36;
+// }
+// .Pricing {
+//   font-size: 15.251px;
+//   font-family: "Helvetica Neue";
+//   color: rgb(128, 115, 133);
+//   line-height: 1.705;
+//   text-align: left;
+//   -moz-transform: matrix( 1,0,0,1.04914527476121,0,0);
+//   -webkit-transform: matrix( 1,0,0,1.04914527476121,0,0);
+//   -ms-transform: matrix( 1,0,0,1.04914527476121,0,0);
+//   position: absolute;
+//   left: 879px;
+//   // top: 848.054px;
+//   z-index: 35;
+// }
+// .Product {
+//   font-size: 15.251px;
+//   font-family: "Helvetica Neue";
+//   color: rgb(128, 115, 133);
+//   line-height: 1.705;
+//   text-align: left;
+//   -moz-transform: matrix( 1,0,0,1.04914527476121,0,0);
+//   -webkit-transform: matrix( 1,0,0,1.04914527476121,0,0);
+//   -ms-transform: matrix( 1,0,0,1.04914527476121,0,0);
+//   position: absolute;
+//   left: 765px;
+//   // top: 822.499px;
+//   z-index: 34;
+// }
