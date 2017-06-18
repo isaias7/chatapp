@@ -1,39 +1,54 @@
-// import React from 'react';
-// import { render } from 'react-dom';
-// import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom';
+import React from 'react'; 
+import './_home.scss';
+import RighAside from '../rightAside/RightAside';
+// import arrow from '../../images/star.sv';
+// import { render } from'react-dom';
 
-// const HomeContainer = require('../../containers/HomeContainer')
+class Home extends React.Component {
+  render() {
+    return (
+      <div className='row'>
+        <div className='container-fluid'>
+          <div className='header row'>
+            <div className='col-md-2'>
+              col de 2
+            </div>
+            <div className='col-md-7'>
+              col de 7
+            </div>
+            <div className='col-md-3'>
+              col de 3
+            </div>
+          </div>
+          <div className='custom-grid row'>
+            <div className='col-md-2 verde'>
+              <div className='row'>
+                <div className='col-md-12 content'>
+                  col de 3
+                </div>
+                <div className='col-md-12 footer'>
+                  col de 3
+                </div>
+              </div>
+            </div>
+            <div className='col-md-7 papaya'>
+              <div className='row'>
+                <div className='col-md-12 content'>
+                  col de 12
+                </div>
+                <div className='col-md-12 footer2'>
+                  col de 12
+                </div>
+              </div>
+            </div>
+            {/*CHUNCHE DEL LADO DERECHO*/}
+            <RighAside />
+            {/*FIN DEL CHUNCHE DEL LADO DERECHO*/}
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
 
-// class App extends React.Component {
-//   constructor(props) {
-//     super(props);
-//   }
-
-//   render() {
-//     return (
-//       // <Router>
-//       //   <div className='container-fluid'>
-//       //     <div className='row' id='mainView'>
-//       //       <Route path='/' component={AppContainer} />
-//       //       <h1>Hola</h1>
-//       //     </div>
-//       //   </div>
-//       // </Router>
-//       <Router>
-//         <div className='container-fluid'>
-//           <Route path='/' component={ AppContainer } />
-//           <Route exact path='/' component={ HomeContainer } />
-//         </div>
-//       </Router>
-//     );
-//   }
-// };
-
-// render(<App />, document.getElementById('app'));
-
-// // <Nav />
-// // <Route exact path='/' component={HomeContainer} />
-// // <Route path='/about-el-brete' component={About} />
-// // <Route path='/post-a-brete' component={AddEditBreteContainer} />
-// // <Route path='/brete/:_id' component={BreteDetail} />
-// // <Route path='/contact-el-brete' component={Contact} />
+export default Home;
