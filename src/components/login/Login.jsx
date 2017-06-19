@@ -43,32 +43,6 @@ class Login extends React.Component {
             <div className='col-md-12' />
           </div>
         </div>
-        {/*<div className='modalLogin'>*/}
-        {/*<div className='container'>*/}
-        {/*<div className='loginLogo'>*/}
-        {/*<img src={ logo } alt='Slack' />*/}
-        {/*</div>*/}
-        {/*<h1>Sing In</h1>*/}
-        {/*<section className='' >*/}
-        {/*<form action='' className='' >*/}
-        {/*<div className='col-lg-12' >*/}
-        {/*<div className='form-group'>*/}
-        {/*<input type='text' className='form-control input-lg' placeholder='User name' />*/}
-        {/*</div>*/}
-        {/*</div>*/}
-        {/*<div className='col-lg-6' >*/}
-        {/*<div className='form-group'>*/}
-        {/*<input type='text' className='form-control input-lg' placeholder='Password' />*/}
-        {/*<span class='form-group-btn'>*/}
-        {/*<button class='btn btn-default' type='button'>Go!</button>*/}
-        {/*</span>*/}
-        {/*</div>*/}
-        {/*</div>*/}
-        {/*</form>*/}
-        {/*</section>*/}
-        {/*<p>Need your group started on Slack?</p>*/}
-        {/*</div>*/}
-        {/*</div>*/}
         <div>
           <div className='modalLogin' >
             <div className='row' >
