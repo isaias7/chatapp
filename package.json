@@ -7,7 +7,7 @@
     "dev": "webpack-dev-server",
     "mockapi": "json-server --watch api_mock/jobs.json",
     "start:client": "concurrently 'npm run dev' 'npm run mockapi'",
-    "start:server": "nodemon api/start",
+    "start:server": "nodemon api/index",
     "start": "concurrently 'npm run dev' 'npm run start:server'"
   },
   "repository": {
@@ -22,11 +22,18 @@
   "homepage": "https://github.com/isaias7/chatapp#readme",
   "dependencies": {
     "axios": "^0.16.2",
+    "bcrypt-nodejs": "0.0.3",
     "connect-flash": "^0.1.1",
+    "crypto": "0.0.3",
     "dotenv": "^4.0.0",
     "express": "^4.15.3",
+    "jsonwebtoken": "^7.4.1",
     "lodash": "^4.17.4",
     "mongoose": "^4.10.6",
+    "morgan": "^1.8.2",
+    "passport": "^0.3.2",
+    "passport-jwt": "^2.2.1",
+    "passport-local": "^1.0.0",
     "prop-types": "^15.5.10",
     "react": "^15.6.0",
     "react-dom": "^15.6.0",
