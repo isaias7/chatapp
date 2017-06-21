@@ -1,4 +1,4 @@
-const path = require('path')
+const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const precss = require('precss');
 const autoprefixer = require('autoprefixer');
@@ -9,59 +9,54 @@ module.exports = {
   entry: {
     javascript: './components/app/app.jsx',
   },
-  devtool: 'eval',
+  devtool: 'source-map',
+  output: {
+    path: path.join(__dirname, '/src'),
+    filename: 'bundle.js',
+  },
   devServer: {
     historyApiFallback: true,
-  },
-  output: {
-    path: path.join(__dirname, '/dist'),
-    filename: 'bundle.js'
-  },
+    },
   resolve: {
+    // add alias for application code directory
+    alias:{
+        'bootstrap-path': path.join(__dirname, '../node_modules/bootstrap-sass/assets/stylesheets/')
+    },
     extensions: ['.js', '.jsx', '.json'],
   },
   stats: {
     colors: true,
     reasons: true,
-    chunks: true
+    chunks: true,
   },
   module: {
     rules: [
       {
-        enforce: 'pre',
-        test: [/\.js$/, /\.jsx$/],
-        loader: 'eslint-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.json$/,
-        loader: 'json-loader'
-      },
-      {
-        test: /\.jsx?$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         loaders: ['babel-loader'],
       },
       {
-        test: [/\.scss$/],
+        test: /\.scss$/,
         use: [
-          'style-loader',// pega los archivos en el CSS
-          'css-loader',// reconoce los imports
-          'sass-loader',
-        ],
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+         ],
       },
       {
         test: /\.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
         loader: 'file-loader?name=fonts/[name].[ext]'
       },
       {
-        test: /\.(jpg|png|svg)$/,
+        test: /\.(?:png|jpg|svg)$/,
         loader: 'url-loader',
-        options: {
-          limit: 25000,
-        },
+        query: {
+        // Inline images smaller than 10kb as data URIs        limit: 10000
+            },
       }
     ],
+
   },
   plugins: [
     new HtmlWebpackPlugin({
