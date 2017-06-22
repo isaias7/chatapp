@@ -24,6 +24,7 @@ class Message extends React.Component {
             </p>
           </div>
         </div>
+        {/*otro mensaje*/}
         <div className='row message'>
           <div className='col-md-2'>
             <img className='imgMessage' src={require(`../../images/hermione.png`)} />
@@ -79,6 +80,7 @@ class Message extends React.Component {
             </p>
           </div>
         </div>
+        {/*fin de mensajes*/}
       </div>
     );
   }

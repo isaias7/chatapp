@@ -29,7 +29,10 @@ class HomeContainer extends React.Component {
     const cookies = new Cookies();
     const token = cookies.get('token');
     if (token) { store.dispatch({ type: SET_USER, user: token, }); }
+    // socket = io.connecttion('http://localhost:3000');
+    // socket.emit('subscribe', 'holita caquita');
   }
+
 
   render() {
     const { allUsers, user } = this.props;

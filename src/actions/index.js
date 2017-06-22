@@ -37,9 +37,9 @@ function setUser(user) {
   return { type: SET_USER, user: user };
 }
 export function loginUser({ email, password }) {
-  console.log('entreeeeee');
-  console.log(email);
-  console.log(password);
+  // console.log('entreeeeee');
+  // console.log(email);
+  // console.log(password);
   //console.log(email.email + ' ' +password );
   return function (dispatch) {
     axios
@@ -74,8 +74,8 @@ function setAllUsers(allUsers) {
 }
 /* Method to get all the users in the database */
 export function fetchAllUsers() {
-  console.log('ENTRE A fectch USERS, url a hacer get: ');
-  console.log(API_URL_ROUTES + '/users');
+  // console.log('ENTRE A fectch USERS, url a hacer get: ');
+  // console.log(API_URL_ROUTES + '/users');
   return function (dispatch) {
     axios
       .get(API_URL_ROUTES + '/users')
