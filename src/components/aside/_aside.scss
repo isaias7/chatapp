@@ -1,55 +1,80 @@
-@import '../../scss/helpers/_variables';
+$brand-color: #3e3044;
+$brand-color-medium: #312736;
+$brand-color-darker: #271e2b;
+
+$full-height: 100vh;
+$height-72: calc(100vh - 72px);
+$height-144: calc(100vh - 144px);
+
+//Purples
+$brand-color: #3e3044;
+$brand-color-medium: #312736;
+$brand-color-darker: #271e2b;
+
+//Grays
+$light-gray: #f1f1f1;
+$gray: #f9f9f9;
+$dark-gray: #e0e0e0;
+
+//fonts
+$purple-font-light: #807385;
+$purple-font: #793a98;
+$gray-font: #9fa3a7;
+
+//green
+$brand-green: #20a766;
+
 .aside{
-  height: $full-height;
+  height: 100vh;
   a, a:hover {
     text-decoration: none;
     cursor: pointer;
   }
-  a:hover {
+  a:hover{
     color:white;
     font-weight: bolder;
   }
-  .aside-margin-left {
-    margin-left: 10%;
+  .aside-margin-left{
+    margin-left: 30%;
   }
-  .header {
+  .header{
     height: 72px;
     display: flex;
     align-items: center;
     background-color: $brand-color;
   }
-  .body {
+  .body{
     height: $height-144;
     background-color: $brand-color-medium;
     display: flex;
     align-items: center;
   }
-  .body-wrapper {
+  .body-wrapper{
     height: 80%;
     width: 100%;
     overflow-y: auto;
   }
-  .channels-info {
+  .channels-info{
     width: 100%;
   }
-  .channels-options {
+  .channels-options{
     color: #dbd0df;
-    font-size: 13px;
+    font-size: 12px;
     font-weight: 700;
     margin-bottom: 25px;
     text-transform: uppercase;
   }
-  .channels {
+  .channels{
     height: calc(100% - 80px);
     .channel{
-      font-size: 16px;
+      font-size: 15px;
       color:  #96889b;
       font-weight: 400;
       margin-bottom: 15px;
       &::nth-last-child(2){
         margin-bottom: 0;
       }
-      &::before {
+      &::before{
         content: "#";
         display: inline-block;
         height: 7px;
@@ -59,23 +84,27 @@
       }
     }
   }
-  .direct-messages {
+  .direct-messages{
     width: 100%;
   }
+
   span {
     display: flex;
   }
-  .white-text {
+  
+  .white-text{
     color: white;
     font-size: 16px;
     font-weight: bold;
+    margin-top: 20%;
   }
-  .user-status {
+  
+  .user-status{
     color: $purple-font-light;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     margin-bottom: 15px;
-    &::before {
+    &::before{
       content: "";
       border-radius: 50%; 
       display: inline-block;
@@ -86,16 +115,18 @@
       width: 6px;
     }
   }
-  .online::before {
+
+  .online::before{
     background: $brand-green;
   }
-  .offline::before {
+  .offline::before{
     height: 7px;
     width: 7px;
     background: transparent;
     border: 1px solid #dbd0df;
   }
-  .footer {
+
+  .footer{
     height: 72px;
     display: flex;
     align-items: center;
@@ -103,7 +134,8 @@
     span{
       font-weight: 400;
     }
-    .search-icon {
+
+    .search-icon{
       height: 14px;
       width: 14px;
       margin: 4px 4px 0 0;

@@ -8,13 +8,13 @@
     "linebreak-style": [0],
     "spaced-comment": [0],
     "max-len": [2, 1000, 4, {"ignoreUrls": true}],
-      "jsx-a11y/img-has-alt": [ 0, {
-            "elements": [ "img", "object", "area", "input[type=\"image\"]" ],
-            "img": ["Image"],
-            "object": ["Object"],
-            "area": ["Area"],
-            "input[type=\"image\"]": ["InputImage"]
-          }],
+    "jsx-a11y/img-has-alt": [ 0, {
+      "elements": [ "img", "object", "area", "input[type=\"image\"]" ],
+      "img": ["Image"],
+      "object": ["Object"],
+      "area": ["Area"],
+      "input[type=\"image\"]": ["InputImage"]
+    }],
     "react/jsx-indent": [0],
     "react/no-unknown-property": [0],
     "arrow-body-style": [0],

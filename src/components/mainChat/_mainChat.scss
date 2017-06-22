@@ -1,19 +1,44 @@
-@import '../../scss/helpers/_variables';
+@import '../../scss/helpers/variables';
 $marginCalc: calc((8.7vh - 30px)/2);
-.mainChat {
+
+.mainChat{
   height: $height-144;
   max-height: $height-144;
   overflow: hidden;
   overflow-y: auto;
-  position:relative; 
+  position:relative;   
 }
-.messageEntry {
+.scrollbar
+{
+	background:#F3F3F3;
+  overflow: hidden;
+  overflow-y: auto;
+  position:relative;   
+}
+#style-1::-webkit-scrollbar-track
+{
+	border-radius: 10px;
+	background-color: #F3F3F3;
+}
+#style-1::-webkit-scrollbar
+{
+  border-radius: 10px;
+	width: 12px;
+	background-color: #F5F5F5;
+}
+#style-1::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #D6D6D6;
+}
+
+.messageEntry{
   display: flex;
   padding-top: $marginCalc;
   text-align: center;
   justify-content: center;
 }
-.buttonPlus {
+.buttonPlus{
   background-color: rgb(224, 224, 224);
   border-radius: 5px;
   border-top-right-radius: 0px;
@@ -29,12 +54,12 @@ $marginCalc: calc((8.7vh - 30px)/2);
   padding: 5px 0px 1.5px 0px;
   width: 3rem;
 }
-.imgPlus {
+.imgPlus{
   height: 0.9rem;
   margin-bottom: 4px;
   width: 0.9rem; 
 }
-.inputMessage {  
+.inputMessage{  
   border-top-left-radius: 0px;
   border-top-right-radius: 0px;
   border-bottom-left-radius: 0px;
@@ -54,7 +79,7 @@ $marginCalc: calc((8.7vh - 30px)/2);
   padding: 6px 10px 6px 10px;
   width: 87%;
 }
-.buttonSmile {
+.buttonSmile{
   background-color: rgb(255, 255, 255);
   border-radius: 5px;
   border-top-left-radius: 0px;
@@ -69,36 +94,18 @@ $marginCalc: calc((8.7vh - 30px)/2);
   padding: 6px 0px 1.5px 0px;
   width: 3rem;
 }
-.imgSmile {
+.imgSmile{
   height: 1.5rem;
   margin-bottom: 4px;
   width: 1.5rem; 
 }
-.main__center {
+.main__center{
   background-color: $main-center__background;
-}
-.footer__center {
-  background-color: $footer-right__background;
-  height: 72px;
-  border-top: 1px solid rgb(231, 231, 231)
+  height: calc(100vh - 144px);
 }
 
-.scrollbar {
-	background:#F3F3F3;
-  overflow: hidden;
-  overflow-y: auto;
-  position:relative;   
-}
-#style-1::-webkit-scrollbar-track {
-	border-radius: 10px;
-	background-color: #F3F3F3;
-}
-#style-1::-webkit-scrollbar {
-  border-radius: 10px;
-	width: 12px;
-	background-color: #F5F5F5;
-}
-#style-1::-webkit-scrollbar-thumb {
-	border-radius: 10px;
-	background-color: #D6D6D6;
+.footer__center{
+  background-color: $footer-right__background;
+  height:  72px;
+  border-top: 1px solid rgb(231, 231, 231)
 }

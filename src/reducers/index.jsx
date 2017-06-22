@@ -1,19 +1,13 @@
-import {
-    AUTH_USER,
-} from '../actions/types';
+import { combineReducers } from 'redux';  
+import { reducer as formReducer } from 'redux-form';  
+import authReducer from './auth_reducer';
+import userReducer from './userReducer'
+import  allUsersReducer from './allUsersReducer'
+const rootReducer = combineReducers({  
+  auth: authReducer,
+  form: formReducer,
+  user: userReducer,
+  allUsers: allUsersReducer,
+});
 
-const INITIAL_STATE = {
-    error: '',
-    message: '',
-    content: '',
-    authenticated: false
-}
-
-export default function (state = INITIAL_STATE, action) {
-    switch (action.type) {
-        case AUTH_USER:
-            return { ...state, error: '', message: '', authenticated: true };
-        default:
-            return state;
-    }
-}
+export default rootReducer;  

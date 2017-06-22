@@ -1,10 +1,8 @@
 import React from 'react';
 import './_mainChat.scss';
-import Messages from '../dateMessagesChat/dateMessageChat';
-import Smile from '../../images/smile.svg';
-import Plus from '../../images/plus.svg';
+import Messages from '../dateMessagesChat/dateMessagesChat';
 
-class MainChat extends React.Component {
+class Chat extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,11 +23,11 @@ class MainChat extends React.Component {
             <div className='col-md-12 footer__center'>
               <div className='messageEntry'>
                 <button className='buttonPlus' href='#' id='' >
-                  <img className='imgPlus' src={ Plus } alt='More' />
+                  <img className='imgPlus' src={require(`../../images/plus.svg`)} />
                 </button>
                 <input className='inputMessage' type='text' placeholder='Message' />
                 <button className='buttonSmile' href='#' id='' >
-                  <img className='imgSmile' src={ Smile } alt='Emojis' />
+                  <img className='imgSmile' src={require(`../../images/smile.svg`)} />
                 </button>
               </div>
             </div>
@@ -39,5 +37,5 @@ class MainChat extends React.Component {
     );
   }
 }
+export default Chat;
 
-export default MainChat;

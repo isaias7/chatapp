@@ -1,21 +1,10 @@
-import React from 'react';
-// import { render } from 'react-dom';
-import './_navBar.scss';
-import Star from '../../images/star.svg';
-import User from '../../images/user.svg';
-import Pin from '../../images/pin.svg';
-import Add from '../../images/plus.svg';
-import Search from '../../images/settings.svg';
-import Call from '../../images/phone.svg';
-import Settings from '../../images/settings.svg';
-import Files from '../../images/pageSettings.svg';
 
+import React from 'react';
+import { render } from 'react-dom';
+import navBarStyle from './_navBar.scss';
 class NavBarChat extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-
-    };
   }
   render() {
     return (
@@ -23,31 +12,32 @@ class NavBarChat extends React.Component {
         <div className='col-md-10'>
           <div className='navBarChat'>
             <div className='navBarLeft'>
-              <div className='title'>
+              <div className=''>
                 <h3 className='titleNavBarLeft'>Channel#2</h3>
               </div>
               <div className='images'>
-                <img alt='Star' src={ Star } className='imageNavBarLeft starImage' />
-                <img alt='User' src={ User } className='imageNavBarLeft userImage' />
-                <img alt='Pin' src={ Pin } className='imageNavBarLeft pinImage' />
-                <img alt='Add' src={ Add } className='imageNavBarLeft addImage' />
+                <img src={require(`../../images/star.svg`)} className='imageNavBarLeft starImage' />
+                <img src={require(`../../images/user.svg`)} className='imageNavBarLeft userImage' />
+                <img src={require(`../../images/pin.svg`)} className='imageNavBarLeft pinImage' />
+                <img src={require(`../../images/add.svg`)} className='imageNavBarLeft addImage' />
                 <p className='textNavBarLeft'>Add a topic</p>
               </div>
             </div>
             <div className='navBarRight'>
               <div className='searchInputContainer'>
                 <input type='text' className='searchInputNavBar' name='srch-term' placeholder='Search' />
-                <img alt='Search' src={ Search } className='searchInputImage' />
+                <img src={require(`../../images/search.svg`)} className='searchInputImage' />
               </div>
-              <img alt='Call' src={ Call } className='imageNavBarRight callImage' />
-              <img alt='Settings' src={ Settings } className='imageNavBarRight settingsImage' />
-              <img alt='Files' src={ Files } className='imageNavBarRight filesImage' />
+              <img src={require(`../../images/call.svg`)} className='imageNavBarRight callImage' />
+              <img src={require(`../../images/settings.svg`)} className='imageNavBarRight settingsImage' />
+              <img src={require(`../../images/files.svg`)} className='imageNavBarRight filesImage' />
             </div>
           </div>
         </div>
+
       </div>
     );
   }
-}
+};
 
-export default NavBarChat;
+export default NavBarChat;                   

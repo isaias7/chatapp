@@ -1,21 +1,27 @@
 import React from 'react';
 import './_home.scss';
-import NavBar from '../navBar/NavBarChat';
-import ChatAside from '../chatAside/Aside';
+import Aside from '../aside/aside';
+//import AsideContainer from '../../containers/AsideContainer';
+import NavBar from '../navBar/navBarChat';
 import MainChat from '../mainChat/mainChat';
-import RighAside from '../rightAside/RightAside';
-
-// import arrow from '../../images/star.sv';
-// import { render } from'react-dom';
+import RightAside from '../rightAside/rightAside';
+import store from '../../store';
 
 class Home extends React.Component {
+  constructor(props) {
+    super(props);
+  }
   render() {
     return (
-      <div className='row'>
-        <ChatAside />
+      <div className='row home'>
+        <Aside
+          allUsers={ this.props.allUsers }
+          directoryReady={ this.props.directoryReady }
+          user={ this.props.user }
+        />
         <NavBar />
         <MainChat />
-        <RighAside />
+        <RightAside />
       </div>
     );
   }

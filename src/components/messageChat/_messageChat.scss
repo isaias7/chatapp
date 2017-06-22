@@ -4,8 +4,6 @@
 }
 .imgMessage{
   border-radius: 50%;
-  height: 70px;
-  width: 70px;
 }
 .messageTitle{
 	display: inline-flex;
@@ -28,4 +26,14 @@
 	font-size: 16px;
   font-family: "Open Sans";
   color: rgb(65, 65, 66);    
+}
+
+.container-fluid {
+    padding-right: 30px;
+}
+
+
+.row:after {
+
+    height: 0vh;
 }

@@ -1,7 +1,5 @@
 import React from 'react';
 import './_messageChat.scss';
-import Harry from '../../images/harry.png'
-import Hermione from '../../images/hermione.png'
 
 class Message extends React.Component {
   constructor(props) {
@@ -15,7 +13,7 @@ class Message extends React.Component {
         {/*ESTE ES OTRO MSJ*/}
         <div className='row message'>
           <div className='col-md-2'>
-            <img className='imgMessage' src={ Hermione } alt='User' />
+            <img className='imgMessage' src={require(`../../images/hermione.png`)} />
           </div>
           <div className='col-md-10'>
             <div className='messageTitle'>
@@ -28,7 +26,7 @@ class Message extends React.Component {
         </div>
         <div className='row message'>
           <div className='col-md-2'>
-            <img className='imgMessage' src={ Hermione } alt='User' />
+            <img className='imgMessage' src={require(`../../images/hermione.png`)} />
           </div>
           <div className='col-md-10'>
             <div className='messageTitle'>
@@ -42,7 +40,7 @@ class Message extends React.Component {
         {/*SON EJEMPLOS*/}
         <div className='row message'>
           <div className='col-md-2'>
-            <img className='imgMessage' src={ Harry } alt='User' />
+            <img className='imgMessage' src={require(`../../images/harry.png`)} />
           </div>
           <div className='col-md-10'>
             <div className='messageTitle'>
@@ -56,7 +54,7 @@ class Message extends React.Component {
         {/*ESTO DEBERIA HACERSE CON UN MAP*/}
         <div className='row message'>
           <div className='col-md-2'>
-            <img className='imgMessage' src={ Hermione } alt='User' />
+            <img className='imgMessage' src={require(`../../images/hermione.png`)} />
           </div>
           <div className='col-md-10'>
             <div className='messageTitle'>
@@ -70,7 +68,7 @@ class Message extends React.Component {
         {/*OTRO EJEMPLO A PATA*/}
         <div className='row message'>
           <div className='col-md-2'>
-            <img className='imgMessage' src={ Harry } alt='User' />
+            <img className='imgMessage' src={require(`../../images/harry.png`)} />
           </div>
           <div className='col-md-10'>
             <div className='messageTitle'>
@@ -85,5 +83,5 @@ class Message extends React.Component {
     );
   }
 }
-
 export default Message;
+
