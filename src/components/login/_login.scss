@@ -48,28 +48,28 @@
   color: rgb(128, 115, 133);
 }
 .navBar-button {
-    display: inline-block;
-    padding-top: 21px;
-    padding-right: 61px;
-    padding-left: 30.5px;
-    padding-bottom: 15px;
+  display: inline-block;
+  padding-top: 21px;
+  padding-right: 61px;
+  padding-left: 30.5px;
+  padding-bottom: 15px;
 }
 .buttonHeader {
-    background-color: transparent;
-    border: 1px solid rgb(128, 115, 133);
-    border-radius: 4px;
-    outline: none;
-    margin-bottom: 15px;
+  background-color: transparent;
+  border: 1px solid rgb(128, 115, 133);
+  border-radius: 4px;
+  outline: none;
+  margin-bottom: 15px;
 }
 .buttonHeader:hover {
-    opacity: 0.7;
-    color: rgb(128, 115, 133);
+  opacity: 0.7;
+  color: rgb(128, 115, 133);
 }
 .navBarLetters {
-    color: rgb(128, 115, 133);
-    line-height: 36px;
-    padding-left: 15px;
-    padding-right: 15px;
+  color: rgb(128, 115, 133);
+  line-height: 36px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 .modalLogin {
   font-family: "Helvetica Neue";
@@ -87,23 +87,23 @@
   text-align: center;
 }
 .imageLogoModal {
-    margin-top: 91px;
+  margin-top: 91px;
 }
 .title{
-    margin-top: 10px;
-    margin-bottom: 100px;
-    font-size: 25.351px;
-    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  font-size: 25.351px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }
 .inputEmail{
   border-radius: 8px;
   background-color: white;
   font-size: 18px;
   outline: none;
-  margin: 0.5rem;
+  margin-bottom: 4%;
   border: none;
   height: 7vh;
-  width: 47.8rem;
+  width: 100%;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
   padding-left:10px;
   color: rgb(159, 163, 167);
@@ -118,35 +118,28 @@
   font-size: 18px;
   outline: none;
   border: none;
-  height: 7vh;
-  margin-left: 5px;
-  width: 36rem;
+  height: 7vh;;
+  width: 80%;
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  padding-left:10px;
+  padding-left: 10px;
   color: rgb(159, 163, 167);
   font-size: 15.251px;
   float: left;
 }
 .buttonArrow{
-    background-color: #20a766;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    border-top-right-radius: 8px;
-    border-bottom-right-radius: 8px; 
-    float: left;
-    width: 10.9rem;
-    box-shadow: none;
-    border: none;
-    height: 7vh;
-    padding-top: 2rem;
-    padding-bottom: 3rem;
-    padding-left: 3.5rem;
-    padding-right: 3rem;
+  background-color: #20a766;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px; 
+  float: left;
+  width: 20%;
+  box-shadow: none;
+  border: none;
+  height: 7vh;
 }
-.imgArrow{
-    padding: 2rem;
-    width: 3rem;
-    height: 3rem
+.arrowSubmit{
+  height: 40%;
 }
 .p__login--left{
   font-size: 16px;
@@ -165,9 +158,35 @@
   margin-left: 0.5rem;
 }
 .image-background {
-    background-image: url('../../images/backgroundLogin.jpg');
-    height: 37.1084vh;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center center;
+  background-image: url('../../images/backgroundLogin.jpg');
+  height: 37.1084vh;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center center;
+  position: relative;
+  z-index: -1;
+}
+
+@media only screen and (max-width : 1153px) and (min-width : 683px) {
+  .image-background {
+    top: -70px;
+  }
+}
+@media only screen and (max-width : 682px) {
+  .image-background {
+    display: none;
+  }
+  .modalLogin {
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    top: 55px;
+    left: 0;
+    z-index: -1;
+  }
+  @media only screen and (max-width: 670px) {
+    .navBarLinks {
+      display: none;
+    }
+  }
 }

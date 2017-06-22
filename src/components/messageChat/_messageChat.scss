@@ -4,6 +4,13 @@
 }
 .imgMessage{
   border-radius: 50%;
+  height: 60%;
+  width: 50%;
+  display: flex; 
+  flex-direction: row; 
+  align-items: center;
+  margin-left: 30%;
+  margin-top: 10;
 }
 .messageTitle{
 	display: inline-flex;
@@ -29,11 +36,35 @@
 }
 
 .container-fluid {
-    padding-right: 30px;
+  padding-right: 30px;
 }
 
-
 .row:after {
+  height: 0vh;
+}
 
-    height: 0vh;
+/*Responsive*/
+@media only screen and (max-width: 1367px) {
+  .imgMessage{
+    height: 50%;
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 1150px) and (min-width: 991px) {
+  .imgMessage{
+    height: 40%;
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 991px) and (min-width: 589px) {
+  .imgMessage{
+    height: 60%;
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 589px) {
+  .imgMessage{
+    display: none;
+  }
 }

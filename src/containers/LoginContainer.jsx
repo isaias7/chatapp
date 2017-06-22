@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import io from 'socket.io-client';
-import appStyle from '../components/app/_app.scss'
+import appStyle from '../components/app/_app.scss';
 import axios from 'axios';
 import Login from '../components/login/login';
 import { loginUser } from '../actions/index';
@@ -56,9 +56,6 @@ class LoginContainer extends React.Component {
                      <li className='navBar--list'>
                        <a className='links' href=''>Support</a>
                      </li>
-                     {/*<li className='navBar--list'>
-                       <a className='links rectangle' href=''>Your Team</a>
-                     </li>*/}
                      <div className='navBar-button'>
                        <button className='buttonHeader'>
                          <span className='navBarLetters'>Your team</span>

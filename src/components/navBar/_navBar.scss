@@ -33,42 +33,43 @@
 .navBarRight{
     width: 30%;
     height: 72px;
-    padding: 0;
+    padding: 1%;
     display: flex; 
     flex-direction: row; 
     align-items: center;
 }
 
 .titleNavBarLeft{
-    color: #2c2b2c;
-    font-family: "Helvetica Neue";
-    font-size: 15.251px;
-    font-weight: 700;
-    line-height: 13.5px;
-    margin: 0 0 0 30px;
+  color: #2c2b2c;
+  font-family: "Helvetica Neue";
+  font-size: 15.251px;
+  font-weight: 700;
+  line-height: 13.5px;
+  margin: 0 0 0 30px;
 }
 
 .imageNavBarLeft{
-    margin-left:20px;
+  margin-left:20px;
 }
 
 .starImage, .pinImage{
-    width: 13px;
-    height: 12px;
+  width: 15px;
+  height: 13px;
 }
 
 .userImage{
-    width: 12px;
-    height: 13px;
+    width: 13px;
+    height: 15px;
 }
 
 .addImage{
-    width: 13px;
-    height: 13px;
+    width: 15px;
+    height: 15px;
 }
 
 .textNavBarLeft{
     margin: 0 0 0 6px;
+    display: inline-block;
     color: #646464;
     font-family: "Open Sans";
     font-size: 10px;
@@ -81,18 +82,18 @@
 }
 
 .callImage{
-    width: 16px;
-    height: 16px;
+    width: 17px;
+    height: 17px;
 }
 
 .settingsImage{
-    width: 18px;
-    height: 16px;
+    width: 19px;
+    height: 17px;
 }
 
 .filesImage{
-    width: 16px;
-    height: 17px;
+    width: 17px;
+    height: 18px;
 }
 
 .searchInputContainer { 
@@ -109,16 +110,16 @@
     border: 1px solid #c8c8c8;
     background-color: #ffffff;
     margin:0; 
-    padding-left: 25px;
-    padding-top: 0.4rem;
+    padding-left: 3.5rem;
+    padding-top: 0.3rem;
 }
 
 .searchInputImage { 
     position:absolute; 
     bottom:8px; 
     left:10px; 
-    width:12px; 
-    height:12px; 
+    width:13px; 
+    height:13px; 
     margin-right: 0.3rem;
 }
 
@@ -133,21 +134,12 @@
     line-height: 27px;
 }
 
-.imgMessage{
-    height: 60%;
-    width: 50%;
-    display: flex; 
-    flex-direction: row; 
-    align-items: center;
-    margin-left: 30%;
-    margin-top: 10%;
-}
-
 /*Responsive*/
 @media only screen and (max-width: 980px) {
     .navBarRight {
         width: auto;
         margin-left: 1.1rem;
+        padding-right: 1%;
     }
     .imageNavBarRight {
         margin: 0px 0 0 15px;
@@ -161,13 +153,16 @@
     .navBarRight {
         width: auto;
         margin-left: 1.1rem;
+        padding-right: 5%;
+        // display: none;
     }
     .imageNavBarRight {
         margin: 0px 0 0 15px;
     }
     .navBarLeft{
-        flex-direction: column; 
-        padding-left: 1rem;
+        // flex-direction: column; 
+        display: none;
+        // padding-left: 1rem;
     }
     .titleNavBarLeft {
         margin: 13px 0 7px -68px;

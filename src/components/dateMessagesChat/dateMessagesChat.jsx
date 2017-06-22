@@ -11,10 +11,8 @@ class DateMessage extends React.Component {
   render() {
     return (
       <div className='row'>
-        <div className='col-md-2 col-md-offset-5'>
-          <h2 className='dateMessage'>
-            <h1>Today</h1>
-          </h2>
+        <div className='col-md-12'>
+          <h2 className='dateMessage'>Today</h2>
         </div>
         <div className='col-md-12'>
           <Message />

@@ -1,5 +1,8 @@
 @import '../../scss/helpers/variables';
 
+body {
+  overflow-x: hidden;
+}
 .main{
   height: $main__hight;
 }

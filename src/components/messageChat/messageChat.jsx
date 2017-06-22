@@ -17,7 +17,7 @@ class Message extends React.Component {
           </div>
           <div className='col-md-10'>
             <div className='messageTitle'>
-              <h4 className='name__style'> Maria</h4>
+              <h4 className='name__style'> Hermione</h4>
               <h5 className='time__style'> 11:55 am</h5>
             </div>
             <p className='p__style'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio at mollitia praesentium est nulla? Incidunt aliquam, nostrum optio, error quod veritatis architecto recusandae explicabo perferendis corporis, tenetur harum facere deserunt.
@@ -31,7 +31,7 @@ class Message extends React.Component {
           </div>
           <div className='col-md-10'>
             <div className='messageTitle'>
-              <h4 className='name__style'> Maria</h4>
+              <h4 className='name__style'> Hermione</h4>
               <h5 className='time__style'> 11:55 am</h5>
             </div>
             <p className='p__style'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio at mollitia praesentium est nulla? Incidunt aliquam, nostrum optio, error quod veritatis architecto recusandae explicabo perferendis corporis, tenetur harum facere deserunt.
@@ -45,7 +45,7 @@ class Message extends React.Component {
           </div>
           <div className='col-md-10'>
             <div className='messageTitle'>
-              <h4 className='name__style'> Juan</h4>
+              <h4 className='name__style'> Harry</h4>
               <h5 className='time__style'> 12:21 pm</h5>
             </div>
             <p className='p__style'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio at mollitia praesentium est nulla? Incidunt aliquam, nostrum optio, error quod veritatis architecto recusandae explicabo perferendis corporis, tenetur harum facere deserunt.
@@ -59,7 +59,7 @@ class Message extends React.Component {
           </div>
           <div className='col-md-10'>
             <div className='messageTitle'>
-              <h4 className='name__style'> Maria</h4>
+              <h4 className='name__style'> Hermione</h4>
               <h5 className='time__style'> 12:40 pm</h5>
             </div>
             <p className='p__style'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio at mollitia praesentium est nulla? Incidunt aliquam, nostrum optio, error quod veritatis architecto recusandae explicabo perferendis corporis, tenetur harum facere deserunt.
@@ -69,15 +69,28 @@ class Message extends React.Component {
         {/*OTRO EJEMPLO A PATA*/}
         <div className='row message'>
           <div className='col-md-2'>
-            <img className='imgMessage' src={require(`../../images/harry.png`)} />
+            <img className='imgMessage' src={require(`../../images/ron.png`)} />
           </div>
           <div className='col-md-10'>
             <div className='messageTitle'>
-              <h4 className='name__style'> Juan</h4>
+              <h4 className='name__style'> Ron</h4>
               <h5 className='time__style'> 12:41 pm</h5>
             </div>
             <p className='p__style'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio at mollitia praesentium est nulla? Incidunt aliquam, nostrum optio, error quod veritatis architecto recusandae explicabo perferendis corporis, tenetur harum facere deserunt.
             </p>
+          </div>
+        </div>
+        {/*ortro mensaje*/}
+        <div className='row message'>
+          <div className='col-md-2'>
+            <img className='imgMessage' src={require(`../../images/ron.png`)} />
+          </div>
+          <div className='col-md-10'>
+            <div className='messageTitle'>
+              <h4 className='name__style'> Ron</h4>
+              <h5 className='time__style'> 12:41 pm</h5>
+            </div>
+            <p className='p__style'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio at mollitia praesentium est nulla? Incidunt aliquam, nostrum optio, error quod veritatis architecto recusandae explicabo perferendis corporis, tenetur harum facere deserunt.</p>
           </div>
         </div>
         {/*fin de mensajes*/}

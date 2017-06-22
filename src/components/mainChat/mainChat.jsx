@@ -10,7 +10,7 @@ class Chat extends React.Component {
   }
   render() {
     return (
-      <div className='col-md-7 '>
+      <div className='col-md-7 col-sm-8 col-xs-8'>
         <main className='main__position'>
           <div className='row'>
             <div className='col-md-12 main main__center mainChat scrollbar' id='style-1'>
@@ -37,5 +37,5 @@ class Chat extends React.Component {
     );
   }
 }
-export default Chat;
 
+export default Chat;

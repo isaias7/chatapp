@@ -4,7 +4,6 @@ import UserDirectoryList from '../userList/userList';
 import { string } from 'prop-types';
 import store from '../../store';
 
-
 class Aside extends React.Component {
 
   constructor(props) {
@@ -18,7 +17,7 @@ class Aside extends React.Component {
       this.state.ready = false;
     }
     return (
-      <div className='aside col-md-2'>
+      <div className='aside col-md-2 col-xs-4 col-sm-4'>
         <div className='row'>
           <header className='col-md-12 header'>
             <div className='header-content aside-margin-left'>
@@ -34,19 +33,21 @@ class Aside extends React.Component {
                 <a><span className='channels-options'>CHANNELS</span></a>
                 <div className='channels'>
                   <a><span className='channel'>Channel 1</span> </a>
-                  <a><span className='channel selected'>Channel 2</span> </a>
+                  <a><span className='channel'>Channel 2</span> </a>
                   <a><span className='channel'>Channel 3</span> </a>
                   <a><span className='channel'>Channel 4</span> </a>
                 </div>
               </div>
               <div className='direct-messages'>
                 <span className='channels-options'>DIRECT MESSAGES</span>
-                <a><span className='user-status online'>Jhon Doe</span></a>
-                <a><span className='user-status online'>Jhon Doe</span></a>
-                <a><span className='user-status online'>Jhon Doe</span></a>
-                <a><span className='user-status online'>Jhon Doe</span></a>
-                <a><span className='user-status offline'>Jhon Doe</span></a>
-                <a><span className='user-status offline'>Jhon Doe</span></a>
+                <a><span className='user-status online'>Hooman</span></a>
+                <a><span className='user-status online'>Isaias</span></a>
+                <a><span className='user-status online'>Harry</span></a>
+                <a><span className='user-status online'>Hermione</span></a>
+                <a><span className='user-status online'>Ron</span></a>
+                <a><span className='user-status offline'>Ginny</span></a>
+                <a><span className='user-status offline'>Neville</span></a>
+                <a><span className='user-status offline'>Luna</span></a>
                 
                 {/*{(this.state.ready ?
                   store.getState().allUsers.allUsers

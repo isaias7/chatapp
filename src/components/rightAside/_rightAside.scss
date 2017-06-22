@@ -5,6 +5,7 @@ $height144: calc(100vh - 144px);
   background-color: #F9F9F9;
   border-left: 1px solid #E6E6E6;
   height: $height72;
+  overflow-y: auto;
 }
 .listContainer > ul {
   list-style: none;
