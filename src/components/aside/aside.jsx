@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import asideStyle from './_aside.scss';
 import UserDirectoryList from '../userList/userList';
 import { string } from 'prop-types';
@@ -8,7 +8,7 @@ class Aside extends React.Component {
 
   constructor(props) {
     super(props);
-    this.state = { ready: false }
+    this.state = { ready: false };
   }
   render() {
     if (store.getState().allUsers.allUsers.length > 1) {
@@ -40,6 +40,17 @@ class Aside extends React.Component {
               </div>
               <div className='direct-messages'>
                 <span className='channels-options'>DIRECT MESSAGES</span>
+                {/*{(this.state.ready ?
+                  store.getState().allUsers.allUsers
+                    .map((user) => (
+                      <a key={ user._id } onClick={ this.onHandleClick }>
+                        <span className='user-status online' id={ user._id } >
+                          {user.profile.firstName}
+                        </span>
+                      </a>
+                    ))
+                  : <div />)
+                }*/}
                 <a><span className='user-status online'>Hooman</span></a>
                 <a><span className='user-status online'>Isaias</span></a>
                 <a><span className='user-status online'>Harry</span></a>
@@ -48,30 +59,18 @@ class Aside extends React.Component {
                 <a><span className='user-status offline'>Ginny</span></a>
                 <a><span className='user-status offline'>Neville</span></a>
                 <a><span className='user-status offline'>Luna</span></a>
-                
-                {/*{(this.state.ready ?
-                  store.getState().allUsers.allUsers
-                    .map((user) => (
-                      <a key={user._id} onClick={this.onHandleClick}>
-                        <span className='user-status online' id={user._id} >
-                          {user.profile.firstName}
-                        </span>
-                      </a>))
-                  : <div />)}*/}
-
               </div>
             </div>
           </div>
           <footer className='col-md-12 footer '>
             <div className='aside-margin-left'>
-              <span className='white-text'><img src={require(`../../images/searchAside.svg`)} className='search-icon' alt='Search' /> Search </span>
+              <span className='white-text'><img src={ require('../../images/searchAside.svg') } className='search-icon' alt='Search' /> Search </span>
             </div>
           </footer>
         </div>
       </div>
     );
-
-  };
+  }
 }
 
 export default Aside;

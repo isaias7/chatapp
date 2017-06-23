@@ -5,7 +5,7 @@ $marginCalc: calc((8.7vh - 30px)/2);
   height: $height-144;
   max-height: $height-144;
   overflow: hidden;
-  overflow-y: auto;
+  overflow-y: scroll auto;
   position:relative;   
 }
 .scrollbar

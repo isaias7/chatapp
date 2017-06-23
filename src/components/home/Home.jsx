@@ -16,7 +16,6 @@ class Home extends React.Component {
       <div className='row home'>
         <Aside
           allUsers={ this.props.allUsers }
-          directoryReady={ this.props.directoryReady }
           user={ this.props.user }
         />
         <NavBar />

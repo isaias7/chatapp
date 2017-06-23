@@ -11,28 +11,25 @@ import { setUserLogged } from '../actions/index';
 import { fetchAllUsers } from '../actions/index';
 import PropTypes from 'prop-types';
 
-let socket = null;
+const socket = null;
 
 class HomeContainer extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       directoryReady: false,
-    }
+    };
   }
-
-  componentDidMount() {
-    this.props.loadAllUsers();
-  }
-
   componentWillMount() {
     const cookies = new Cookies();
     const token = cookies.get('token');
-    if (token) { store.dispatch({ type: SET_USER, user: token, }); }
+    if (token) { store.dispatch({ type: SET_USER, user: token }); }
     // socket = io.connecttion('http://localhost:3000');
     // socket.emit('subscribe', 'holita caquita');
   }
-
+  componentDidMount() {
+    this.props.loadAllUsers();
+  }
 
   render() {
     const { allUsers, user } = this.props;
@@ -49,14 +46,14 @@ class HomeContainer extends React.Component {
 HomeContainer.propTypes = {
   loadAllUsers: PropTypes.func,
   allUsers: PropTypes.arrayOf(PropTypes.object),
-  user: PropTypes.object
+  user: PropTypes.object,
 };
 
 // Specifies the default values for props:
 HomeContainer.defaultProps = {
   allUsers: [{}],
   user: {},
-  setDirectoryReady: false
+  setDirectoryReady: false,
 };
 
 const mapStateToProps = (state) => {

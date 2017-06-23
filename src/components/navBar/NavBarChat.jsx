@@ -16,21 +16,21 @@ class NavBarChat extends React.Component {
                 <h3 className='titleNavBarLeft'>Channel#2</h3>
               </div>
               <div className='images'>
-                <img src={require(`../../images/star.svg`)} className='imageNavBarLeft starImage' />
-                <img src={require(`../../images/user.svg`)} className='imageNavBarLeft userImage' />
-                <img src={require(`../../images/pin.svg`)} className='imageNavBarLeft pinImage' />
-                <img src={require(`../../images/add.svg`)} className='imageNavBarLeft addImage' />
+                <img src={ require('../../images/star.svg') } className='imageNavBarLeft starImage' />
+                <img src={ require('../../images/user.svg') } className='imageNavBarLeft userImage' />
+                <img src={ require('../../images/pin.svg') } className='imageNavBarLeft pinImage' />
+                <img src={ require('../../images/add.svg') } className='imageNavBarLeft addImage' />
                 <p className='textNavBarLeft'>Add a topic</p>
               </div>
             </div>
             <div className='navBarRight'>
               <div className='searchInputContainer'>
                 <input type='text' className='searchInputNavBar' name='srch-term' placeholder='Search' />
-                <img src={require(`../../images/search.svg`)} className='searchInputImage' />
+                <img src={ require('../../images/search.svg') } className='searchInputImage' />
               </div>
-              <img src={require(`../../images/call.svg`)} className='imageNavBarRight callImage' />
-              <img src={require(`../../images/settings.svg`)} className='imageNavBarRight settingsImage' />
-              <img src={require(`../../images/files.svg`)} className='imageNavBarRight filesImage' />
+              <img src={ require('../../images/call.svg') } className='imageNavBarRight callImage' />
+              <img src={ require('../../images/settings.svg') } className='imageNavBarRight settingsImage' />
+              <img src={ require('../../images/files.svg') } className='imageNavBarRight filesImage' />
             </div>
           </div>
         </div>
@@ -38,6 +38,6 @@ class NavBarChat extends React.Component {
       </div>
     );
   }
-};
+}
 
-export default NavBarChat;                   
+export default NavBarChat;
