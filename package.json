@@ -4,11 +4,10 @@
   "description": "Chat app, slack",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server",
-    "mockapi": "json-server --watch api_mock/jobs.json",
-    "start:client": "concurrently 'npm run dev' 'npm run mockapi'",
-    "start:server": "nodemon api/index",
-    "start": "concurrently 'npm run dev' 'npm run start:server'"
+    "lint": "eslint js/**/*.js webpack.config.js",
+    "build": "node ./node_modules/webpack/bin/webpack.js",
+    "start": "webpack-dev-server",
+    "watch": "npm run build -- --watch"
   },
   "repository": {
     "type": "git",

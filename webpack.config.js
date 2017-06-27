@@ -11,16 +11,15 @@ module.exports = {
   },
   devtool: 'source-map',
   output: {
-    path: path.join(__dirname, '/src'),
+    path: path.join(__dirname, '/dist'),
     filename: 'bundle.js',
   },
   devServer: {
     historyApiFallback: true,
-  },
+    },
   resolve: {
-    // add alias for application code directory
-    alias: {
-      'bootstrap-path': path.join(__dirname, '../node_modules/bootstrap-sass/assets/stylesheets/')
+    alias:{
+        'bootstrap-path': path.join(__dirname, '../node_modules/bootstrap-sass/assets/stylesheets/')
     },
     extensions: ['.js', '.jsx', '.json'],
   },
@@ -42,7 +41,7 @@ module.exports = {
           'style-loader',
           'css-loader',
           'sass-loader'
-        ],
+         ],
       },
       {
         test: /\.(ttf|otf|eot|woff(2)?)(\?[a-z0-9]+)?$/,
@@ -52,11 +51,10 @@ module.exports = {
         test: /\.(?:png|jpg|svg)$/,
         loader: 'url-loader',
         query: {
-          // Inline images smaller than 10kb as data URIs        limit: 10000
+        // Inline images smaller than 10kb as data URIs
         },
       }
     ],
-
   },
   plugins: [
     new HtmlWebpackPlugin({

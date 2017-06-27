@@ -40,7 +40,7 @@ class Aside extends React.Component {
               </div>
               <div className='direct-messages'>
                 <span className='channels-options'>DIRECT MESSAGES</span>
-                {/*{(this.state.ready ?
+                {(this.state.ready ?
                   store.getState().allUsers.allUsers
                     .map((user) => (
                       <a key={ user._id } onClick={ this.onHandleClick }>
@@ -50,12 +50,7 @@ class Aside extends React.Component {
                       </a>
                     ))
                   : <div />)
-                }*/}
-                <a><span className='user-status online'>Hooman</span></a>
-                <a><span className='user-status online'>Isaias</span></a>
-                <a><span className='user-status online'>Harry</span></a>
-                <a><span className='user-status online'>Hermione</span></a>
-                <a><span className='user-status online'>Ron</span></a>
+                }
                 <a><span className='user-status offline'>Ginny</span></a>
                 <a><span className='user-status offline'>Neville</span></a>
                 <a><span className='user-status offline'>Luna</span></a>

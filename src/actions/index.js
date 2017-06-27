@@ -9,16 +9,11 @@ import {
   UNAUTH_USER,
   PROTECTED_TEST,
   SET_USER,
-  SET_ALL_USERS,
-  SET_FETCH_READY,
-  SET_CHAT,
-  SET_MESSAGE,
-  SET_USER_LOGGED
+  SET_ALL_USERS
 } from './types';
 
-const API_URL = 'http://localhost:3000/api';
-const CLIENT_URL = 'http://localhost:8080';
-const API_URL_ROUTES = 'http://localhost:3000/api/routes';
+const API_URL = 'https://evening-meadow-64939.herokuapp.com/api';
+const API_URL_ROUTES = 'https://evening-meadow-64939.herokuapp.com/routes';
 
 export function errorHandler(dispatch, error, type) {
   let errorMessage = '';
@@ -37,15 +32,10 @@ function setUser(user) {
   return { type: SET_USER, user: user };
 }
 export function loginUser({ email, password }) {
-  // console.log('entreeeeee');
-  // console.log(email);
-  // console.log(password);
-  //console.log(email.email + ' ' +password );
   return function (dispatch) {
     axios
       .post(`${API_URL}/auth/login`, { email, password })
       .then((response) => {
-        console.log('YOOO');
         dispatch({
           type: 'SET_USER',
           user: response.data.user
@@ -74,8 +64,6 @@ function setAllUsers(allUsers) {
 }
 /* Method to get all the users in the database */
 export function fetchAllUsers() {
-  // console.log('ENTRE A fectch USERS, url a hacer get: ');
-  // console.log(API_URL_ROUTES + '/users');
   return function (dispatch) {
     axios
       .get(API_URL_ROUTES + '/users')
