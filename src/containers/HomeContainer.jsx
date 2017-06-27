@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import * as actions from '../actions';
 import io from 'socket.io-client';
 import axios from 'axios';
-import Home from '../components/home/home';
+import Home from '../components/home/Home';
 import Cookies from 'universal-cookie';
 import store from '../store';
 import { SET_USER } from '../actions/types';

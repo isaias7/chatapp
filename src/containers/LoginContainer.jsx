@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import io from 'socket.io-client';
 import appStyle from '../components/app/_app.scss';
 import axios from 'axios';
-import Login from '../components/login/login';
+import Login from '../components/login/Login';
 import { loginUser } from '../actions/index';
 import { Field, reduxForm } from 'redux-form';
 
