@@ -6,6 +6,10 @@ import axios from 'axios';
 import Login from '../components/login/Login';
 import { loginUser } from '../actions/index';
 import { Field, reduxForm } from 'redux-form';
+import { Link } from 'react-router-dom';
+import { Redirect } from 'react-router';
+import store from '../store';
+import PropTypes from 'prop-types';
 
 const form = reduxForm({
   form: 'login',
@@ -42,7 +46,7 @@ class LoginContainer extends React.Component {
           <div className='navBar row'>
             <div className='col-md-12'>
               <div className='logo'>
-                <img src={require('../images/logoSlackHeader.png')} alt='Logo' />
+                <img src={ require('../images/logoSlackHeader.png') } alt='Logo' />
               </div>
               <div className='navBarLinks'>
                 <ul className='unorderList'>
@@ -75,10 +79,10 @@ class LoginContainer extends React.Component {
         </div>
         <div>
           <div className='modalLogin' >
-            <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
+            <form onSubmit={ handleSubmit(this.handleFormSubmit.bind(this)) }>
               {this.renderAlert()}
               <div className='col-md-4 col-md-offset-4' >
-                <img src={require('../images/logoModal.png')} className='imageLogoModal' alt='Slack' />
+                <img src={ require('../images/logoModal.png') } className='imageLogoModal' alt='Slack' />
               </div>
               <div className='col-md-8 col-md-offset-2 center' >
                 <h3 className='title'>Sign in to your team</h3>
@@ -89,19 +93,19 @@ class LoginContainer extends React.Component {
               <div className='col-md-8 col-md-offset-2 center'>
                 <div>
                   <Field name='password' className='inputPwd' component='input' type='pasword' placeholder='Password' />
+                  {console.log(this.props.user)}
                   {this.props.user !== null && this.props.user !== undefined
                     ? this.props.user.userLogged == true
-                      ? <Redirect to='/home' />
-                      : null
+                      ? <Redirect to='/chat' />
+                      : console.log('REDIRECT TO LOGIN')
+                    : null
                   }
-
                   <button className='buttonArrow' href='#' id='' type='submit' >
-                    <img src={require('../images/loginarrow.svg')} className='arrowSubmit' alt='Login' />
+                    <img src={ require('../images/loginarrow.svg') } className='arrowSubmit' alt='Login' />
                   </button>
                 </div>
               </div>
-              <div className='col-md-8 col-md-offset-2 center'>
-              </div>
+              <div className='col-md-8 col-md-offset-2 center' />
             </form>
           </div>
         </div>
