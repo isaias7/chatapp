@@ -89,6 +89,13 @@ class LoginContainer extends React.Component {
               <div className='col-md-8 col-md-offset-2 center'>
                 <div>
                   <Field name='password' className='inputPwd' component='input' type='text' placeholder='Password' />
+                  {this.props.user !== null && this.props.user !== undefined
+                    ? this.props.user.userLogged == true
+                      ? <Redirect to='/chat' />
+                      : console.log('REDIRECT TO LOGIN')
+                    : null
+                  }
+
                   <button className='buttonArrow' href='#' id='' type='submit' >
                     <img src={ require('../images/loginarrow.svg') } className='arrowSubmit' alt='Login' />
                   </button>

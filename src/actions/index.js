@@ -9,7 +9,7 @@ import {
   UNAUTH_USER,
   PROTECTED_TEST,
   SET_USER,
-  SET_ALL_USERS
+  SET_ALL_USERS,
 } from './types';
 
 const API_URL = 'https://evening-meadow-64939.herokuapp.com/api';
@@ -28,33 +28,36 @@ export function errorHandler(dispatch, error, type) {
 }
 
 function setUser(user) {
-  console.log('estoy en setUser con el usuario ' + user);
-  return { type: SET_USER, user: user };
+  console.log(`estoy en setUser con el usuario ${user}`);
+  return { type: SET_USER, user };
 }
 export function loginUser({ email, password }) {
+  console.log('ESTOY EN LOGIN');
   return function (dispatch) {
     axios
       .post(`${API_URL}/auth/login`, { email, password })
       .then((response) => {
         dispatch({
-          type: 'SET_USER',
-          user: response.data.user
+          type: SET_USER,
+          user: response.data.user,
+        });
+        dispatch({
+          type: AUTH_USER,
+        });
+        dispatch({
+          type: SET_USER_LOGGED,
+          userLogged: true,
         });
         const cookies = new Cookies();
         cookies.set('token', response.data.user, { path: '/' });
-        window.location.href = '/home';
-      })
-      .catch((error) => {
-        //errorHandler(dispatch, error.response, 'auth_error');
-        console.log('Axios error');
       });
-  }
+  };
 }
 
 export function setUserLogged(object) {
   dispatch({
     type: 'SET_USER_LOGGED',
-    userLogged: object
+    userLogged: object,
   });
 }
 
@@ -66,12 +69,12 @@ function setAllUsers(allUsers) {
 export function fetchAllUsers() {
   return function (dispatch) {
     axios
-      .get(API_URL_ROUTES + '/users')
+      .get(`${API_URL_ROUTES}/users`)
       .then((response) => {
         dispatch({ type: 'SET_ALL_USERS', allUsers: response.data });
       })
       .catch(error => console.log('Axios error: ', error));
-  }
+  };
 }
 
 export function getUser({ id }) {
