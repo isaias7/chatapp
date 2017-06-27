@@ -42,7 +42,7 @@ class LoginContainer extends React.Component {
           <div className='navBar row'>
             <div className='col-md-12'>
               <div className='logo'>
-                <img src={ require('../images/logoSlackHeader.png') } alt='Logo' />
+                <img src={require('../images/logoSlackHeader.png')} alt='Logo' />
               </div>
               <div className='navBarLinks'>
                 <ul className='unorderList'>
@@ -75,10 +75,10 @@ class LoginContainer extends React.Component {
         </div>
         <div>
           <div className='modalLogin' >
-            <form onSubmit={ handleSubmit(this.handleFormSubmit.bind(this)) }>
+            <form onSubmit={handleSubmit(this.handleFormSubmit.bind(this))}>
               {this.renderAlert()}
               <div className='col-md-4 col-md-offset-4' >
-                <img src={ require('../images/logoModal.png') } className='imageLogoModal' alt='Slack' />
+                <img src={require('../images/logoModal.png')} className='imageLogoModal' alt='Slack' />
               </div>
               <div className='col-md-8 col-md-offset-2 center' >
                 <h3 className='title'>Sign in to your team</h3>
@@ -88,22 +88,19 @@ class LoginContainer extends React.Component {
               </div>
               <div className='col-md-8 col-md-offset-2 center'>
                 <div>
-                  <Field name='password' className='inputPwd' component='input' type='text' placeholder='Password' />
+                  <Field name='password' className='inputPwd' component='input' type='pasword' placeholder='Password' />
                   {this.props.user !== null && this.props.user !== undefined
                     ? this.props.user.userLogged == true
-                      ? <Redirect to='/chat' />
-                      : console.log('REDIRECT TO LOGIN')
-                    : null
+                      ? <Redirect to='/home' />
+                      : null
                   }
 
                   <button className='buttonArrow' href='#' id='' type='submit' >
-                    <img src={ require('../images/loginarrow.svg') } className='arrowSubmit' alt='Login' />
+                    <img src={require('../images/loginarrow.svg')} className='arrowSubmit' alt='Login' />
                   </button>
                 </div>
               </div>
               <div className='col-md-8 col-md-offset-2 center'>
-                {/*<p className='p__login--center'>You do not have an account?</p>
-                 <p className='p__login--left'>Sign up </p>*/}
               </div>
             </form>
           </div>
@@ -117,6 +114,7 @@ function mapStateToProps(state) {
   return {
     errorMessage: state.auth.error,
     message: state.auth.message,
+    user: state.user,
   };
 }
 

@@ -1,16 +1,8 @@
 import axios from 'axios';
 import { browserHistory } from 'react-router';
-//import cookie from 'react-cookie';
 import Cookies from 'universal-cookie';
 import store from '../store';
-import {
-  AUTH_USER,
-  AUTH_ERROR,
-  UNAUTH_USER,
-  PROTECTED_TEST,
-  SET_USER,
-  SET_ALL_USERS,
-} from './types';
+import { AUTH_USER, AUTH_ERROR, UNAUTH_USER, SET_USER, SET_ALL_USERS, SET_FETCH_READY, SET_CHAT, SET_MESSAGE, SET_USER_LOGGED, SET_MESSAGES_FOR_EVERYONE, SET_CURRENT_MESSAGES, SET_MESSAGES_TYPE, UPDATE_MESSAGE, UPDATE_MESSAGE_CHANNELS } from './types';
 
 const API_URL = 'https://evening-meadow-64939.herokuapp.com/api';
 const API_URL_ROUTES = 'https://evening-meadow-64939.herokuapp.com/routes';
