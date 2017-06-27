@@ -2,9 +2,9 @@ import React from 'react';
 import './_home.scss';
 import Aside from '../aside/aside';
 //import AsideContainer from '../../containers/AsideContainer';
-import NavBar from '../navBar/navBarChat';
+import NavBar from '../navBar/NavBarChat';
 import MainChat from '../mainChat/mainChat';
-import RightAside from '../rightAside/rightAside';
+import RightAside from '../rightAside/RightAside';
 import store from '../../store';
 
 class Home extends React.Component {
