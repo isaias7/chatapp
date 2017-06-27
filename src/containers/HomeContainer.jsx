@@ -6,12 +6,12 @@ import axios from 'axios';
 import Home from '../components/home/Home';
 import Cookies from 'universal-cookie';
 import store from '../store';
-import { SET_USER } from '../actions/types';
-import { setUserLogged } from '../actions/index';
-import { fetchAllUsers } from '../actions/index';
+import { SET_USER, SET_OTHER_USER_ID } from '../actions/types';
+import { fetchAllUsers, fetchAllCurrentMessages, fetchMessagesForEveryone, sendNewMessage, sendNewMessageBroadcast } from '../actions/index';
+import { changeMessageType, updateMessagesFromSocket, updateMessagesBroadcastFromSocket, getUserSelectedData, getUserEmisorData } from '../actions/index';
 import PropTypes from 'prop-types';
 
-const socket = null;
+let socket = null;
 
 class HomeContainer extends React.Component {
   constructor(props) {
