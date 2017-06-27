@@ -96,7 +96,7 @@ class LoginContainer extends React.Component {
                   {console.log(this.props.user)}
                   {this.props.user !== null && this.props.user !== undefined
                     ? this.props.user.userLogged == true
-                      ? <Redirect to='/chat' />
+                      ? <Redirect to='/home' />
                       : console.log('REDIRECT TO LOGIN')
                     : null
                   }
