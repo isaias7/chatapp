@@ -43,14 +43,12 @@ class Aside extends React.Component {
                 {(this.state.ready ?
                   store.getState().allUsers.allUsers
                     .map((user) => (
-                      <a key={ user._id } onClick={ this.onHandleClick }>
-                        <span className='user-status online' id={ user._id } >
+                      <a key={ user._id } onClick={ this.onHandleClickChat } >
+                        <span className={ (store.getState().user.userSelectedId === user._id && store.getState().allCurrentMessages.messageType !== 'room') ? 'focus online' : 'notFocus online' } id={ user._id } >
                           {user.profile.firstName}
                         </span>
-                      </a>
-                    ))
-                  : <div />)
-                }
+                      </a>))
+                  : '')}
                 <a><span className='user-status offline'>Ginny</span></a>
                 <a><span className='user-status offline'>Neville</span></a>
                 <a><span className='user-status offline'>Luna</span></a>
